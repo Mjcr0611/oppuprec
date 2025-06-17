@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+	<!--begin::Head-->
+	<head><base href="">
+		<title>Repositorio UPRE</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="dist/assets/media/logos/icono.ico" />
+		<!--begin::Fonts-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+		<!--end::Fonts-->
+		<!--begin::Page Vendor Stylesheets(used by this page)-->
+		<link href="dist/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Page Vendor Stylesheets-->
+		<!--begin::Global Stylesheets Bundle(used by all pages)-->
+		<link href="dist/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="dist/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Global Stylesheets Bundle-->
+		<style>
+			.report-container {
+			  position: relative;
+			  width: 100%;
+			  overflow: hidden;
+			  padding-top: 61%;
+			}
+			.responsive-iframe {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  bottom: 0;
+			  right: 0;
+			  width: 100%;
+			  height: 100%;
+			  border: none;
+			}
+			</style>
+	</head>
+	<!--end::Head-->
+	<!--begin::Body-->
+	<body id="kt_body" style="background-image: url(dist/assets/media/patterns/header-bg.png)" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled">
+		<!--begin::Main-->
+		<!--begin::Root-->
+		<div class="d-flex flex-column flex-root">
+			<!--begin::Page-->
+			<div class="page d-flex flex-row flex-column-fluid">
+				<!--begin::Wrapper-->
+				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+					<!--begin::Header-->
+					<div id="kt_header" class="header align-items-stretch" data-kt-sticky="true" data-kt-sticky-name="header" data-kt-sticky-offset="{default: '200px', lg: '300px'}">
+						<!--begin::Container-->
+						<div class="container-xxl d-flex align-items-center">
+							<!--begin::Heaeder menu toggle-->
+							<div class="d-flex align-items-center d-lg-none ms-n2 me-3" title="Show aside menu">
+								<div class="btn btn-icon btn-custom w-30px h-30px w-md-40px h-md-40px" id="kt_header_menu_mobile_toggle">
+									<!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
+									<span class="svg-icon svg-icon-2x">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+											<path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z" fill="black" />
+											<path opacity="0.3" d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z" fill="black" />
+										</svg>
+									</span>
+									<!--end::Svg Icon-->
+								</div>
+							</div>
+							<!--end::Heaeder menu toggle-->
+							<!--begin::Header Logo-->
+							<div class="header-logo me-5 me-md-10 flex-grow-1 flex-lg-grow-0">
+								<a href="../index.html">
+									<img alt="Logo" src="dist/assets/media/logos/logo_one.png" class="h-45px h-lg-50px logo-default" />
+									<!--<img alt="Logo" src="dist/assets/media/logos/logo-light.svg" class="h-15px h-lg-20px logo-default" />-->
+									<img alt="Logo" src="dist/assets/media/logos/logo-default.svg" class="h-15px h-lg-20px logo-sticky" />
+								</a>
+							</div>
+							<!--end::Header Logo-->
+							<!--begin::Wrapper-->
+							<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+								<!--begin::Navbar-->
+								<div class="d-flex align-items-stretch" id="kt_header_nav">
+									<!--begin::Menu wrapper-->
+									<div class="header-menu align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_header_menu_mobile_toggle" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
+										<!--begin::Menu-->
+										<div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
+											<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+												<span class="menu-link py-3">
+													<span class="menu-title">Reportes</span>
+													<span class="menu-arrow d-lg-none"></span>
+												</span>
+												<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+													<div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+														<span class="menu-link py-3">
+															<span class="menu-icon">
+																<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
+																<span class="svg-icon svg-icon-2">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																		<path opacity="0.3" d="M21.25 18.525L13.05 21.825C12.35 22.125 11.65 22.125 10.95 21.825L2.75 18.525C1.75 18.125 1.75 16.725 2.75 16.325L4.04999 15.825L10.25 18.325C10.85 18.525 11.45 18.625 12.05 18.625C12.65 18.625 13.25 18.525 13.85 18.325L20.05 15.825L21.35 16.325C22.35 16.725 22.35 18.125 21.25 18.525ZM13.05 16.425L21.25 13.125C22.25 12.725 22.25 11.325 21.25 10.925L13.05 7.62502C12.35 7.32502 11.65 7.32502 10.95 7.62502L2.75 10.925C1.75 11.325 1.75 12.725 2.75 13.125L10.95 16.425C11.65 16.725 12.45 16.725 13.05 16.425Z" fill="black" />
+																		<path d="M11.05 11.025L2.84998 7.725C1.84998 7.325 1.84998 5.925 2.84998 5.525L11.05 2.225C11.75 1.925 12.45 1.925 13.15 2.225L21.35 5.525C22.35 5.925 22.35 7.325 21.35 7.725L13.05 11.025C12.45 11.325 11.65 11.325 11.05 11.025Z" fill="black" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->
+															</span>
+															<span class="menu-title">Seguimiento de Becas</span>
+															<span class="menu-arrow"></span>
+														</span>
+														<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
+															<div class="menu-item">
+																<a class="menu-link py-3" href="../seg_becas.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Seguimiento Presupuestal
+																</a>
+															</div>
+															<div class="menu-item">
+																<a class="menu-link py-3" href="conograma_becas.html" data-kt-page="pro">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Cronograma de Convocatorias
+																</a>
+															</div>
+															<!--<div class="menu-item">
+																<a class="menu-link py-3" href="#">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Seguimiento Nominal
+																</a>
+															</div>-->
+														</div>
+													</div>
+													<div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+														<span class="menu-link py-3">
+															<span class="menu-icon">
+																<!--begin::Svg Icon | path: icons/duotune/general/gen051.svg-->
+																<span class="svg-icon svg-icon-2">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																		<path opacity="0.3" d="M21.25 18.525L13.05 21.825C12.35 22.125 11.65 22.125 10.95 21.825L2.75 18.525C1.75 18.125 1.75 16.725 2.75 16.325L4.04999 15.825L10.25 18.325C10.85 18.525 11.45 18.625 12.05 18.625C12.65 18.625 13.25 18.525 13.85 18.325L20.05 15.825L21.35 16.325C22.35 16.725 22.35 18.125 21.25 18.525ZM13.05 16.425L21.25 13.125C22.25 12.725 22.25 11.325 21.25 10.925L13.05 7.62502C12.35 7.32502 11.65 7.32502 10.95 7.62502L2.75 10.925C1.75 11.325 1.75 12.725 2.75 13.125L10.95 16.425C11.65 16.725 12.45 16.725 13.05 16.425Z" fill="black" />
+																		<path d="M11.05 11.025L2.84998 7.725C1.84998 7.325 1.84998 5.925 2.84998 5.525L11.05 2.225C11.75 1.925 12.45 1.925 13.15 2.225L21.35 5.525C22.35 5.925 22.35 7.325 21.35 7.725L13.05 11.025C12.45 11.325 11.65 11.325 11.05 11.025Z" fill="black" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->
+															</span>
+															<span class="menu-title">Seguimiento de Créditos</span>
+															<span class="menu-arrow"></span>
+														</span>
+														<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
+															<div class="menu-item">
+																<a class="menu-link py-3" href="seg_creditos.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Seguimiento Presupuestal
+																</a>
+															</div>
+															<div class="menu-item">
+																<a class="menu-link py-3" href="conograma_creditos.html">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Cronograma de Convocatorias
+																</a>
+															</div>
+															<!--<div class="menu-item">
+																<a class="menu-link py-3" href="#">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Seguimiento Nominal
+																</a>
+															</div>-->
+														</div>
+													</div>
+													<!--<div class="menu-item">
+														<a class="menu-link py-3" href="#">
+															<span class="menu-icon">
+																begin::Svg Icon | path: icons/duotune/general/gen014.svg
+																<span class="svg-icon svg-icon-2">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																		<path opacity="0.3" d="M21.25 18.525L13.05 21.825C12.35 22.125 11.65 22.125 10.95 21.825L2.75 18.525C1.75 18.125 1.75 16.725 2.75 16.325L4.04999 15.825L10.25 18.325C10.85 18.525 11.45 18.625 12.05 18.625C12.65 18.625 13.25 18.525 13.85 18.325L20.05 15.825L21.35 16.325C22.35 16.725 22.35 18.125 21.25 18.525ZM13.05 16.425L21.25 13.125C22.25 12.725 22.25 11.325 21.25 10.925L13.05 7.62502C12.35 7.32502 11.65 7.32502 10.95 7.62502L2.75 10.925C1.75 11.325 1.75 12.725 2.75 13.125L10.95 16.425C11.65 16.725 12.45 16.725 13.05 16.425Z" fill="black" />
+																		<path d="M11.05 11.025L2.84998 7.725C1.84998 7.325 1.84998 5.925 2.84998 5.525L11.05 2.225C11.75 1.925 12.45 1.925 13.15 2.225L21.35 5.525C22.35 5.925 22.35 7.325 21.35 7.725L13.05 11.025C12.45 11.325 11.65 11.325 11.05 11.025Z" fill="black" />
+																	</svg>
+																</span>
+																end::Svg Icon
+															</span>
+															<span class="menu-title">Seguimiento de ejecución por Oficinas
+														</a>
+													</div>-->
+													<!--<div data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item menu-lg-down-accordion">
+														<span class="menu-link py-3">
+															<span class="menu-icon">
+																begin::Svg Icon | path: icons/duotune/communication/com012.svg
+																<span class="svg-icon svg-icon-2">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																		<path opacity="0.3" d="M21.25 18.525L13.05 21.825C12.35 22.125 11.65 22.125 10.95 21.825L2.75 18.525C1.75 18.125 1.75 16.725 2.75 16.325L4.04999 15.825L10.25 18.325C10.85 18.525 11.45 18.625 12.05 18.625C12.65 18.625 13.25 18.525 13.85 18.325L20.05 15.825L21.35 16.325C22.35 16.725 22.35 18.125 21.25 18.525ZM13.05 16.425L21.25 13.125C22.25 12.725 22.25 11.325 21.25 10.925L13.05 7.62502C12.35 7.32502 11.65 7.32502 10.95 7.62502L2.75 10.925C1.75 11.325 1.75 12.725 2.75 13.125L10.95 16.425C11.65 16.725 12.45 16.725 13.05 16.425Z" fill="black" />
+																		<path d="M11.05 11.025L2.84998 7.725C1.84998 7.325 1.84998 5.925 2.84998 5.525L11.05 2.225C11.75 1.925 12.45 1.925 13.15 2.225L21.35 5.525C22.35 5.925 22.35 7.325 21.35 7.725L13.05 11.025C12.45 11.325 11.65 11.325 11.05 11.025Z" fill="black" />
+																	</svg>
+																</span>
+																end::Svg Icon
+															</span>
+															<span class="menu-title">Otros Seguimientos</span>
+															<span class="menu-arrow"></span>
+														</span>
+														<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg py-lg-4 w-lg-225px">
+															<div class="menu-item">
+																<a class="menu-link py-3" href="#">
+																	<span class="menu-bullet">
+																		<span class="bullet bullet-dot"></span>
+																	</span>
+																	<span class="menu-title">Seguimiento multianual de ejecución presupuestal
+																</a>
+															</div>
+														</div>
+													</div>-->
+												</div>
+											</div>
+											<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+												<span class="menu-link py-3">
+													<span class="menu-title">Recursos</span>
+													<span class="menu-arrow d-lg-none"></span>
+												</span>
+												<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+													<div class="menu-item">
+														<a class="menu-link py-3" href="#">
+															<span class="menu-icon">
+																<!--begin::Svg Icon | path: icons/duotune/layouts/lay009.svg-->
+																<span class="svg-icon svg-icon-2">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																		<path opacity="0.3" d="M20 14H11C10.4 14 10 13.6 10 13V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V13C21 13.6 20.6 14 20 14ZM21 20V17C21 16.4 20.6 16 20 16H11C10.4 16 10 16.4 10 17V20C10 20.6 10.4 21 11 21H20C20.6 21 21 20.6 21 20Z" fill="black" />
+																		<path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="black" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->
+															</span>
+															<span class="menu-title">APM y DA Becas 2026</span>
+														</a>
+													</div>
+													<div class="menu-item">
+														<a class="menu-link py-3" href="#">
+															<span class="menu-icon">
+																<!--begin::Svg Icon | path: icons/duotune/abstract/abs027.svg-->
+																<span class="svg-icon svg-icon-2">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																		<path opacity="0.3" d="M21.25 18.525L13.05 21.825C12.35 22.125 11.65 22.125 10.95 21.825L2.75 18.525C1.75 18.125 1.75 16.725 2.75 16.325L4.04999 15.825L10.25 18.325C10.85 18.525 11.45 18.625 12.05 18.625C12.65 18.625 13.25 18.525 13.85 18.325L20.05 15.825L21.35 16.325C22.35 16.725 22.35 18.125 21.25 18.525ZM13.05 16.425L21.25 13.125C22.25 12.725 22.25 11.325 21.25 10.925L13.05 7.62502C12.35 7.32502 11.65 7.32502 10.95 7.62502L2.75 10.925C1.75 11.325 1.75 12.725 2.75 13.125L10.95 16.425C11.65 16.725 12.45 16.725 13.05 16.425Z" fill="black" />
+																		<path d="M11.05 11.025L2.84998 7.725C1.84998 7.325 1.84998 5.925 2.84998 5.525L11.05 2.225C11.75 1.925 12.45 1.925 13.15 2.225L21.35 5.525C22.35 5.925 22.35 7.325 21.35 7.725L13.05 11.025C12.45 11.325 11.65 11.325 11.05 11.025Z" fill="black" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->
+															</span>
+															<span class="menu-title">APM y DA Créditos 2026</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!--end::Menu-->
+									</div>
+									<!--end::Menu wrapper-->
+								</div>
+								<!--end::Navbar-->
+								<!--begin::Topbar-->
+								<div class="d-flex align-items-stretch flex-shrink-0">
+									<!--begin::Toolbar wrapper-->
+									<div class="topbar d-flex align-items-stretch flex-shrink-0">
+										<!--begin::Quick links-->
+										<div class="d-flex align-items-center ms-1 ms-lg-3">
+											<!--begin::Menu wrapper-->
+											<div class="btn btn-icon btn-custom btn-active-light w-30px h-30px w-md-40px h-md-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+												<span class="svg-icon svg-icon-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+														<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />
+														<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />
+														<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+											</div>
+											<!--begin::Menu-->
+											<div class="menu menu-sub menu-sub-dropdown menu-column w-250px w-lg-325px" data-kt-menu="true">
+												<!--begin::Heading-->
+												<div class="d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-10" style="background-image:url('dist/assets/media//patterns/dropdown-header-bg.png')">
+													<!--begin::Title-->
+													<h3 class="text-white fw-bold mb-3">Accesos directos</h3>
+													<!--end::Title-->
+												</div>
+												<!--end::Heading-->
+												<!--begin:Nav-->
+												<div class="row g-0">
+													<!--begin:Item-->
+													<div class="col-6">
+														<a href="../index.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end border-bottom">
+															<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
+															<span class="svg-icon svg-icon-3x svg-icon-success mb-2">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M18 21.6C16.6 20.4 9.1 20.3 6.3 21.2C5.7 21.4 5.1 21.2 4.7 20.8L2 18C4.2 15.8 10.8 15.1 15.8 15.8C16.2 18.3 17 20.5 18 21.6ZM18.8 2.8C18.4 2.4 17.8 2.20001 17.2 2.40001C14.4 3.30001 6.9 3.2 5.5 2C6.8 3.3 7.4 5.5 7.7 7.7C9 7.9 10.3 8 11.7 8C15.8 8 19.8 7.2 21.5 5.5L18.8 2.8Z" fill="black" />
+																	<path opacity="0.3" d="M21.2 17.3C21.4 17.9 21.2 18.5 20.8 18.9L18 21.6C15.8 19.4 15.1 12.8 15.8 7.8C18.3 7.4 20.4 6.70001 21.5 5.60001C20.4 7.00001 20.2 14.5 21.2 17.3ZM8 11.7C8 9 7.7 4.2 5.5 2L2.8 4.8C2.4 5.2 2.2 5.80001 2.4 6.40001C2.7 7.40001 3.00001 9.2 3.10001 11.7C3.10001 15.5 2.40001 17.6 2.10001 18C3.20001 16.9 5.3 16.2 7.8 15.8C8 14.2 8 12.7 8 11.7Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+															<span class="fs-5 fw-bold text-gray-800 mb-0">Inicio</span>
+														</a>
+													</div>
+													<!--end:Item-->
+													<!--begin:Item-->
+													<div class="col-6">
+														<a href="#" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-bottom">
+															<!--begin::Svg Icon | path: icons/duotune/communication/com010.svg-->
+															<span class="svg-icon svg-icon-3x svg-icon-success mb-2">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M18 21.6C16.6 20.4 9.1 20.3 6.3 21.2C5.7 21.4 5.1 21.2 4.7 20.8L2 18C4.2 15.8 10.8 15.1 15.8 15.8C16.2 18.3 17 20.5 18 21.6ZM18.8 2.8C18.4 2.4 17.8 2.20001 17.2 2.40001C14.4 3.30001 6.9 3.2 5.5 2C6.8 3.3 7.4 5.5 7.7 7.7C9 7.9 10.3 8 11.7 8C15.8 8 19.8 7.2 21.5 5.5L18.8 2.8Z" fill="black" />
+																	<path opacity="0.3" d="M21.2 17.3C21.4 17.9 21.2 18.5 20.8 18.9L18 21.6C15.8 19.4 15.1 12.8 15.8 7.8C18.3 7.4 20.4 6.70001 21.5 5.60001C20.4 7.00001 20.2 14.5 21.2 17.3ZM8 11.7C8 9 7.7 4.2 5.5 2L2.8 4.8C2.4 5.2 2.2 5.80001 2.4 6.40001C2.7 7.40001 3.00001 9.2 3.10001 11.7C3.10001 15.5 2.40001 17.6 2.10001 18C3.20001 16.9 5.3 16.2 7.8 15.8C8 14.2 8 12.7 8 11.7Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+															<span class="fs-5 fw-bold text-gray-800 mb-0">Oficinas</span>
+														</a>
+													</div>
+													<!--end:Item-->
+													<!--begin:Item-->
+													<div class="col-6">
+														<a href="../seg_becas.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end">
+															<!--begin::Svg Icon | path: icons/duotune/abstract/abs042.svg-->
+															<span class="svg-icon svg-icon-3x svg-icon-success mb-2">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M18 21.6C16.6 20.4 9.1 20.3 6.3 21.2C5.7 21.4 5.1 21.2 4.7 20.8L2 18C4.2 15.8 10.8 15.1 15.8 15.8C16.2 18.3 17 20.5 18 21.6ZM18.8 2.8C18.4 2.4 17.8 2.20001 17.2 2.40001C14.4 3.30001 6.9 3.2 5.5 2C6.8 3.3 7.4 5.5 7.7 7.7C9 7.9 10.3 8 11.7 8C15.8 8 19.8 7.2 21.5 5.5L18.8 2.8Z" fill="black" />
+																	<path opacity="0.3" d="M21.2 17.3C21.4 17.9 21.2 18.5 20.8 18.9L18 21.6C15.8 19.4 15.1 12.8 15.8 7.8C18.3 7.4 20.4 6.70001 21.5 5.60001C20.4 7.00001 20.2 14.5 21.2 17.3ZM8 11.7C8 9 7.7 4.2 5.5 2L2.8 4.8C2.4 5.2 2.2 5.80001 2.4 6.40001C2.7 7.40001 3.00001 9.2 3.10001 11.7C3.10001 15.5 2.40001 17.6 2.10001 18C3.20001 16.9 5.3 16.2 7.8 15.8C8 14.2 8 12.7 8 11.7Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+															<span class="fs-5 fw-bold text-gray-800 mb-0">Becas</span>
+														</a>
+													</div>
+													<!--end:Item-->
+													<!--begin:Item-->
+													<div class="col-6">
+														<a href="seg_creditos.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light">
+															<!--begin::Svg Icon | path: icons/duotune/finance/fin009.svg-->
+															<span class="svg-icon svg-icon-3x svg-icon-success mb-2">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M18 21.6C16.6 20.4 9.1 20.3 6.3 21.2C5.7 21.4 5.1 21.2 4.7 20.8L2 18C4.2 15.8 10.8 15.1 15.8 15.8C16.2 18.3 17 20.5 18 21.6ZM18.8 2.8C18.4 2.4 17.8 2.20001 17.2 2.40001C14.4 3.30001 6.9 3.2 5.5 2C6.8 3.3 7.4 5.5 7.7 7.7C9 7.9 10.3 8 11.7 8C15.8 8 19.8 7.2 21.5 5.5L18.8 2.8Z" fill="black" />
+																	<path opacity="0.3" d="M21.2 17.3C21.4 17.9 21.2 18.5 20.8 18.9L18 21.6C15.8 19.4 15.1 12.8 15.8 7.8C18.3 7.4 20.4 6.70001 21.5 5.60001C20.4 7.00001 20.2 14.5 21.2 17.3ZM8 11.7C8 9 7.7 4.2 5.5 2L2.8 4.8C2.4 5.2 2.2 5.80001 2.4 6.40001C2.7 7.40001 3.00001 9.2 3.10001 11.7C3.10001 15.5 2.40001 17.6 2.10001 18C3.20001 16.9 5.3 16.2 7.8 15.8C8 14.2 8 12.7 8 11.7Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+															<span class="fs-5 fw-bold text-gray-800 mb-0">Créditos</span>
+														</a>
+													</div>
+													<!--end:Item-->
+												</div>
+												<!--end:Nav-->
+											</div>
+											<!--end::Menu-->
+											<!--end::Menu wrapper-->
+										</div>
+										<!--end::Quick links-->
+										<!--begin::Aside mobile toggle-->
+										<!--end::Aside mobile toggle-->
+									</div>
+									<!--end::Toolbar wrapper-->
+								</div>
+								<!--end::Topbar-->
+							</div>
+							<!--end::Wrapper-->
+						</div>
+						<!--end::Container-->
+					</div>
+					<!--end::Header-->
+					<!--begin::Toolbar-->
+					<br>
+					<!--end::Toolbar-->
+					<!--begin::Container-->
+					<div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
+						<!--begin::Post-->
+						<div class="content flex-row-fluid" id="kt_content">
+							<!--begin::Index-->
+							<div class="card card-page">
+								<!--begin::reportebi-->
+									<div class="report-container"> 
+										<iframe class="responsive-iframe" src="https://1drv.ms/x/c/d22759daeb859d9e/IQSHg0fu8SdWRIiBtYl0V8KlAaut8WFqFPqgvqAT6sVLBHU" allowFullScreen="true"></iframe>
+									  </div>					
+								<!--end::reportebi-->
+							</div>
+							<!--end::Index-->
+						</div>
+						<!--end::Post-->
+					</div>
+					<!--end::Container-->
+					<!--begin::Footer-->
+					<div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+						<!--begin::Container-->
+						<div class="container-xxl d-flex flex-column flex-md-row align-items-center justify-content-between">
+							<!--begin::Copyright-->
+							<div class="text-dark order-2 order-md-1">
+								<span class="text-muted fw-bold me-1">2024©</span>
+								<a href="#" target="_blank" class="text-gray-800 text-hover-primary">Unidad de Presupuesto</a>
+							</div>
+							<!--end::Copyright-->
+						</div>
+						<!--end::Container-->
+					</div>
+					<!--end::Footer-->
+				</div>
+				<!--end::Wrapper-->
+			</div>
+			<!--end::Page-->
+		</div>
+		<!--end::Root-->
+		<!--end::Main-->
+		<script>var hostUrl = "assets/";</script>
+		<!--begin::Javascript-->
+		<!--begin::Global Javascript Bundle(used by all pages)-->
+		<script src="dist/assets/plugins/global/plugins.bundle.js"></script>
+		<script src="dist/assets/js/scripts.bundle.js"></script>
+		<!--end::Global Javascript Bundle-->
+		<!--begin::Page Vendors Javascript(used by this page)-->
+		<script src="dist/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+		<!--end::Page Vendors Javascript-->
+		<!--begin::Page Custom Javascript(used by this page)-->
+		<script src="dist/assets/js/custom/widgets.js"></script>
+		<!--end::Page Custom Javascript-->
+		<!--end::Javascript-->
+	</body>
+	<!--end::Body-->
+</html>
